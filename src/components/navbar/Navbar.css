@@ -1,0 +1,88 @@
+.navbar {
+  background-color: var(--bg-color);
+  padding: 20px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--text-color);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.login-link:hover {
+  color: var(--accent-color);
+}
+
+.sign-up-btn {
+  background-color: var(--text-color);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 8px; /* Slightly more squarish according to design but let's stick to rounded or pill */
+}
+
+.sign-up-btn:hover {
+  background-color: #2a1f55;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Adjust button for specific look in navbar */
+.navbar .btn {
+  border-radius: 8px; /* Based on image, the sign up button looks slightly more rectangular with rounded corners */
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-actions {
+    display: none;
+  }
+}

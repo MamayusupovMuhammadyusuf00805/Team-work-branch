@@ -1,0 +1,146 @@
+.pricing-page {
+  padding-bottom: 60px;
+}
+
+.pricing-hero {
+  padding: 60px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 50%;
+  height: 150%;
+  background-color: #FDF1ED;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.pricing-hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.pricing-hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.pricing-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+
+.pricing-hero-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.pricing-hero-image {
+  flex: 1;
+}
+
+.pricing-hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: block;
+  margin-left: auto;
+}
+
+.pricing-plans-section {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+  margin: 0 -100vw;
+  padding-left: 100vw;
+  padding-right: 100vw;
+}
+
+/* Fix for full width background on light gray */
+.pricing-plans-section {
+  position: relative;
+}
+
+.pricing-plans-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  width: 200vw;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.5); /* subtle background */
+  z-index: -1;
+}
+
+.pricing-plans-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.pricing-plans-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.pricing-plans-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .pricing-hero-container {
+    flex-direction: column;
+  }
+  .pricing-hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+  .pricing-hero-image img {
+    margin: 0 auto;
+  }
+  .pricing-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .pricing-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
